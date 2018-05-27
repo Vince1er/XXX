@@ -11771,38 +11771,38 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This file was written and can be executed with <strong>Anaconda/Jupyter</strong>. From it, were generated the two
+files: <strong>JPM_2.py</strong> (with the Python code with comments) and the HTML file <strong>JPM_2.html</strong>.<br></p>
+<p><strong>These 3 files share the same content</strong><br></p>
+<p>One can execute JMP.py under a python interpreter with the command:<br>
+'&gt;&gt;&gt; execfile('JPM_2.py')'<br>
+Nevertheless I suggest the reading of JPM_2.html in any browser if you are not using Jupyter.<br>
+The format of the Python file might be slightly less readable.<br></p>
+<p>The content is the following.<br></p>
+<p>It defines data for stocks and trades. They are global variables:<br>
+<strong>stock</strong> of type pd.DataFrame for the list of stocks<br>
+<strong>trades, tr,...</strong> of type pd.DataFrame for trade records<br></p>
+<p>Then functions answering the spreadsheet questions<br>
+<strong>1.a.i) dividend_yield(...)</strong><br> 
+<strong>1.a.ii) price_earnings_ratio(...)</strong> <br><br>
+<strong>1.a.iii) add_trade(...)</strong><br>
+<strong>1.a.iv) volume_weighted_stock_price(...)</strong><br>
+<strong>b.</strong> <strong>geometric_mean(...)</strong> and <strong>GBCE_stock_index(...)</strong><br>
+These functions are <strong>carefully commented</strong>.<br></p>
+<p>Numerous data sets are also defined and executed so that the author
+hopes that it can be easy for anyone to use this script for
+executing and testing. In particular the end of file contains data
+and function calls for testing.<br></p>
+<p>Thanks for your attention.<br>
+Best regards.<br>
+Vincent Schmitt.</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>u&#39;/Users/vincent/Desktop/Jupyter-demo&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -11815,7 +11815,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -11831,14 +11831,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Definition of sample set of data. The same as defined in the spreadsheet.</p>
+<p>Definition of a sample set of data. The same as defined in the spreadsheet.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -11851,7 +11851,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TEA&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Common&#39;</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mf">100.</span><span class="p">],</span>
@@ -11869,7 +11869,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span>
@@ -11885,7 +11885,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -11906,10 +11906,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> <span class="n">stock</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">,</span><span class="s1">&#39;LastDiv&#39;</span><span class="p">,</span><span class="s1">&#39;FixedDiv&#39;</span><span class="p">,</span><span class="s1">&#39;ParV&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -11936,113 +11949,6 @@ div#notebook {
 <div class="output_area">
 
 <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>TEA</th>
-      <td>Common</td>
-      <td>0.0</td>
-      <td>NaN</td>
-      <td>100.0</td>
-    </tr>
-    <tr>
-      <th>ALE</th>
-      <td>Common</td>
-      <td>23.0</td>
-      <td>NaN</td>
-      <td>60.0</td>
-    </tr>
-    <tr>
-      <th>JOE</th>
-      <td>Common</td>
-      <td>13.0</td>
-      <td>NaN</td>
-      <td>250.0</td>
-    </tr>
-    <tr>
-      <th>POP</th>
-      <td>Common</td>
-      <td>8.0</td>
-      <td>NaN</td>
-      <td>100.0</td>
-    </tr>
-    <tr>
-      <th>GIN</th>
-      <td>Preferred</td>
-      <td>8.0</td>
-      <td>2.0</td>
-      <td>100.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">,</span><span class="s1">&#39;LastDiv&#39;</span><span class="p">,</span><span class="s1">&#39;FixedDiv&#39;</span><span class="p">,</span><span class="s1">&#39;ParV&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12122,14 +12028,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Above is a Pandas frame with the data</p>
+<p>Above is the Pandas frame 'stock' with data similar to the spreadsheet.<br>
+<strong>I will use this global variable in this test.</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;JOE&#39;</span><span class="p">]</span>
@@ -12145,7 +12052,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -12166,7 +12073,40 @@ Name: JOE, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="s1">&#39;JOE&#39;</span> <span class="ow">in</span> <span class="n">stock</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">market_price</span> <span class="o">=</span> <span class="mf">12.00</span>
@@ -12179,7 +12119,7 @@ Name: JOE, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;JOE&#39;</span><span class="p">][</span><span class="s1">&#39;LastDiv&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">market_price</span>
@@ -12195,7 +12135,7 @@ Name: JOE, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -12222,7 +12162,7 @@ account the "preferred" shares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">dividend_yield_0</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -12237,10 +12177,43 @@ account the "preferred" shares.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield_0</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">12.</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0833333333333333</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield_0</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">60.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12259,39 +12232,6 @@ account the "preferred" shares.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1.0833333333333333</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield_0</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">60.</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
 <pre>0.21666666666666667</pre>
 </div>
 
@@ -12305,28 +12245,43 @@ account the "preferred" shares.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the definitive version of the function computing the dividend yield.
-I suppose that the stock_index exists in the stock and corresponds to a unique row.
-(I.e. stock_index is a key).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.a.i</strong> This is the definitive version of the function computing the dividend yield. I suppose that the stock_index exists in the stock and corresponds to a unique row. (I.e. stock_index is a key).</p>
+<p><strong>1.a.i</strong> Below is the definitive version of the function dividend_yield computing the dividend yield.<br>
+Arguments are:<br>
+stock_index: the key index for the stock. This stock should exist in the global variable 'stock'.<br> 
+stock_index corresponds there to a unique row, i.e. stock_index is a key.<br>
+market_price: a market price, that should be a strictly positive number.<br></p>
+<p>The stock list is the global variable 'stock'.<br>
+There are basic tests on arguments (type and range). If an argument is not valid, a vualue NAN
+is returned and a warning message is issued.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">dividend_yield</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># import to test number types</span>
+<span class="kn">import</span> <span class="nn">numbers</span>
+<span class="c1">#</span>
+<span class="k">def</span> <span class="nf">dividend_yield</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">):</span>
+    <span class="c1"># basic tests on arguments</span>
+    <span class="c1"># existence of the stock with index stock_index</span>
+    <span class="c1"># market_price should be a number and strictly positive </span>
+    <span class="k">if</span> <span class="n">stock_index</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stock</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">stock_index</span> <span class="o">+</span> <span class="s1">&#39; not an existing stock index&#39;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">market_price</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">market_price</span>
+        <span class="k">print</span> <span class="s1">&#39;market_price not a number&#39;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">if</span> <span class="n">market_price</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">market_price</span>
+        <span class="k">print</span> <span class="s1">&#39;market_price not a strictly positive number&#39;</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="c1"># </span>
+    <span class="c1">#</span>
     <span class="n">st</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">stock_index</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">st</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Preferred&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="s1">&#39;FixedDiv&#39;</span><span class="p">]</span><span class="o">/</span><span class="mf">100.</span><span class="p">)</span><span class="o">*</span><span class="n">st</span><span class="p">[</span><span class="s1">&#39;ParV&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">market_price</span>
@@ -12340,10 +12295,43 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">26.</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">13.</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12362,7 +12350,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1.0</pre>
+<pre>0.02</pre>
 </div>
 
 </div>
@@ -12376,7 +12364,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;XXX&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12389,13 +12377,24 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 <div class="output_area">
 
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>XXX not an existing stock index
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.02</pre>
+<pre>nan</pre>
 </div>
 
 </div>
@@ -12403,27 +12402,48 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.a.ii.</strong> I understand from the given definitions that the P/E ratio is just
-<strong>the inverse of the dividend yield</strong>. Below is the function computing the P/E ratio.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">price_earnings_ratio</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">dividend_yield</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="s1">&#39;aaa&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>aaa
+market_price not a number
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>nan</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12433,7 +12453,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">13.</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dividend_yield</span><span class="p">(</span><span class="s1">&#39;TEA&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12452,40 +12472,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>50.0</pre>
+<pre>0.0</pre>
 </div>
 
 </div>
@@ -12498,17 +12485,27 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For the next question, I define an array (a "Pandas Frame") storing the trade records.</p>
+<p><strong>1.a.ii.</strong> I understand from the given definitions that the P/E ratio is just <strong>the inverse of the dividend yield</strong>. (Note: I am used to the definition P/E ratio = earnings per share/price per share, not so much dividend/price)<br></p>
+<p>Below is the function computing the P/E ratio.<br>
+It simply returns the inverse of the dividend yield computed in <strong>1.a.i</strong>. Arguments are the same as in <strong>1.a.i</strong>.<br>
+A NAN value is returned if its arguments are invalid, i.e. yielding a zero or undefided dividend yield.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="s1">&#39;stock_index&#39;</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">,</span><span class="s1">&#39;buy/sell&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">price_earnings_ratio</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">):</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="n">dividend_yield</span><span class="p">(</span><span class="n">stock_index</span><span class="p">,</span> <span class="n">market_price</span><span class="p">)</span>
+    <span class="c1"># very basic tests on the value returned, that could be improved if necessary! </span>
+    <span class="k">if</span> <span class="n">dy</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">if</span> <span class="n">dy</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">dy</span>
 </pre></div>
 
 </div>
@@ -12518,10 +12515,10 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="mf">26.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12534,40 +12531,13 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>stock_index</th>
-      <th>qty</th>
-      <th>buy/sell</th>
-      <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>2.0</pre>
 </div>
 
 </div>
@@ -12581,8 +12551,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="s1">&#39;15-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;stock_index&#39;</span><span class="p">:</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> 
-                   <span class="s1">&#39;buy/sell&#39;</span><span class="p">:</span><span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span><span class="mf">250.</span><span class="p">},</span><span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12599,44 +12568,9 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>stock_index</th>
-      <th>qty</th>
-      <th>buy/sell</th>
-      <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>15-02-18</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>50.0</pre>
 </div>
 
 </div>
@@ -12650,35 +12584,7 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">trades</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="s1">&#39;15-03-18&#39;</span><span class="p">,</span> <span class="s1">&#39;stock_index&#39;</span><span class="p">:</span><span class="s1">&#39;GIN&#39;</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span> 
-                   <span class="s1">&#39;buy/sell&#39;</span><span class="p">:</span><span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span><span class="mf">30.</span><span class="p">},</span><span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="s1">&#39;15-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;stock_index&#39;</span><span class="p">:</span><span class="s1">&#39;JOE&#39;</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> 
-                   <span class="s1">&#39;buy/sell&#39;</span><span class="p">:</span><span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span><span class="mf">250.</span><span class="p">},</span><span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;TEA&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12691,7 +12597,107 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>nan</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">price_earnings_ratio</span><span class="p">(</span><span class="s1">&#39;XXX&#39;</span><span class="p">,</span><span class="mf">100.</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>XXX not an existing stock index
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>nan</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For the next question, I define an array (a "Pandas Frame") storing the trade records. Then I am using 
+it as a global variable.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="s1">&#39;stock_index&#39;</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">,</span><span class="s1">&#39;buy/sell&#39;</span><span class="p">,</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -12722,22 +12728,6 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>15-03-18</td>
-      <td>GIN</td>
-      <td>300</td>
-      <td>buy</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>15-02-18</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -12753,130 +12743,14 @@ I suppose that the stock_index exists in the stock and corresponds to a unique r
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A first version of the function adding a trade record to the trade list.
-Actually I should have coded an object and this function should be 
-a modifier for this object. It is not the case here. The array of data
-is just a Pandas Frame.</p>
+<p>I am using Pandas Timestamp for timestamping.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">add_trade_0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">stock_index</span><span class="p">,</span> <span class="n">qty</span><span class="p">,</span> <span class="n">bs_ind</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="n">date</span><span class="p">,</span> <span class="s1">&#39;stock_index&#39;</span><span class="p">:</span><span class="n">stock_index</span><span class="p">,</span><span class="s1">&#39;qty&#39;</span><span class="p">:</span><span class="n">qty</span><span class="p">,</span> 
-                   <span class="s1">&#39;buy/sell&#39;</span><span class="p">:</span><span class="n">bs_ind</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">:</span><span class="n">price</span><span class="p">},</span><span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">t</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade_0</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;15-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[29]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>stock_index</th>
-      <th>qty</th>
-      <th>buy/sell</th>
-      <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>15-03-18</td>
-      <td>GIN</td>
-      <td>300</td>
-      <td>buy</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>15-02-18</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>15-02-18</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -12892,13 +12766,13 @@ is just a Pandas Frame.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Timestamp(&#39;2018-05-26 14:54:56.428670&#39;)</pre>
+<pre>Timestamp(&#39;2018-05-27 18:19:59.277651&#39;)</pre>
 </div>
 
 </div>
@@ -12909,7 +12783,7 @@ is just a Pandas Frame.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -12925,7 +12799,7 @@ is just a Pandas Frame.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -12944,90 +12818,25 @@ is just a Pandas Frame.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a second version of the function adding trade records into the list. 
-Now the date entered should be of the type pd.Timestamp. 
-If the argument date is not given to the function then the date is set by default
-to the current date.</p>
+<p><strong>1.a.iii.</strong> Below is the function adding a trade record into a list.<br></p>
+<p>It takes as input:<br>
+the list of trades t that is a Pandas Frame as defined before<br>
+the list of arguments corresponding to a peculiar trade:<br>
+stock_index: index of the stock traded, it should exist as a key in stock<br>
+qty: quantity, an integer<br>
+bs_ind: buy/sell index, values should be 'buy'/'sell'(it could have been a boolean!)<br>
+price: price per stock, a positive number<br>
+date: the date of the trade, should be a pd.Timestamp. <strong>By default it is set to the current date</strong>.<br></p>
+<p>It returns the list t in which a new trade has been recorded.<br></p>
+<p><strong>Beware: for simplicity, the implementation below does not check the argument types nor their consistency.</strong> 
+This could be done if necessary.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">trades</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[33]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>stock_index</th>
-      <th>qty</th>
-      <th>buy/sell</th>
-      <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">add_trade</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">stock_index</span><span class="p">,</span> <span class="n">qty</span><span class="p">,</span> <span class="n">bs_ind</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -13045,10 +12854,10 @@ to the current date.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">trades</span>
 </pre></div>
 
 </div>
@@ -13058,23 +12867,7 @@ to the current date.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">150.</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
@@ -13090,7 +12883,7 @@ to the current date.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[37]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13121,46 +12914,6 @@ to the current date.</p>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>2018-05-26 14:55:13.704518</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2018-05-26 14:55:16.617846</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>sell</td>
-      <td>250.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2018-05-26 14:55:16.627014</td>
-      <td>JOE</td>
-      <td>100</td>
-      <td>buy</td>
-      <td>250.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2018-05-26 14:55:16.634000</td>
-      <td>GIN</td>
-      <td>200</td>
-      <td>buy</td>
-      <td>50.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2018-05-26 14:55:16.638400</td>
-      <td>ALE</td>
-      <td>200</td>
-      <td>buy</td>
-      <td>150.0</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -13174,11 +12927,10 @@ to the current date.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">150.</span><span class="p">,</span> 
-               <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">150.</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13188,10 +12940,21 @@ to the current date.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">250.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">150.</span><span class="p">)</span>
+<span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;buy&#39;</span><span class="p">,</span> <span class="mf">100.</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">75.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">125.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;POP&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">300.</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">150.</span><span class="p">,</span> 
+               <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">2017</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">50.</span><span class="p">)</span>
 <span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">100.</span><span class="p">)</span>
 </pre></div>
 
@@ -13202,7 +12965,7 @@ to the current date.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
@@ -13218,7 +12981,7 @@ to the current date.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[40]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -13251,15 +13014,15 @@ to the current date.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2018-05-26 14:55:13.704518</td>
+      <td>2018-05-27 18:19:59.384559</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
-      <td>250.0</td>
+      <td>150.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2018-05-26 14:55:16.617846</td>
+      <td>2018-05-27 18:19:59.414747</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
@@ -13267,7 +13030,7 @@ to the current date.</p>
     </tr>
     <tr>
       <th>2</th>
-      <td>2018-05-26 14:55:16.627014</td>
+      <td>2018-05-27 18:19:59.427118</td>
       <td>JOE</td>
       <td>100</td>
       <td>buy</td>
@@ -13275,7 +13038,7 @@ to the current date.</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>2018-05-26 14:55:16.634000</td>
+      <td>2018-05-27 18:19:59.433387</td>
       <td>GIN</td>
       <td>200</td>
       <td>buy</td>
@@ -13283,7 +13046,7 @@ to the current date.</p>
     </tr>
     <tr>
       <th>4</th>
-      <td>2018-05-26 14:55:16.638400</td>
+      <td>2018-05-27 18:19:59.438893</td>
       <td>ALE</td>
       <td>200</td>
       <td>buy</td>
@@ -13292,22 +13055,54 @@ to the current date.</p>
     <tr>
       <th>5</th>
       <td>2017-01-01 12:59:03.000000</td>
+      <td>TEA</td>
+      <td>200</td>
+      <td>buy</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2018-05-27 18:19:59.450219</td>
+      <td>GIN</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>75.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2018-05-27 18:19:59.459214</td>
+      <td>TEA</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>125.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2018-05-27 18:19:59.472929</td>
+      <td>POP</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2017-01-01 12:59:03.000000</td>
       <td>ALE</td>
       <td>200</td>
       <td>sell</td>
       <td>150.0</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>2018-05-26 14:55:28.011853</td>
+      <th>10</th>
+      <td>2018-05-27 18:19:59.489029</td>
       <td>ALE</td>
       <td>150</td>
       <td>sell</td>
       <td>50.0</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>2018-05-26 14:55:28.021738</td>
+      <th>11</th>
+      <td>2018-05-27 18:19:59.493791</td>
       <td>ALE</td>
       <td>300</td>
       <td>sell</td>
@@ -13328,15 +13123,16 @@ to the current date.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For question 1.iv the stock has to be in the trade list of trades not older 
-than 15 minutes.</p>
+<p>Question <strong>1.a.iv</strong>.<br>
+The stock considered should have been traded within the last 15 minutes.
+In Pandas differences of time stamps of type pd.Timestamp are of type pd.Timedelta.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">time_now</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -13349,7 +13145,7 @@ than 15 minutes.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">min_delta</span> <span class="o">=</span> <span class="s1">&#39;360 min&#39;</span>
@@ -13362,7 +13158,7 @@ than 15 minutes.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">time_delta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">min_delta</span><span class="p">)</span>
@@ -13375,7 +13171,7 @@ than 15 minutes.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">time_delta</span>
@@ -13391,7 +13187,7 @@ than 15 minutes.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -13408,7 +13204,7 @@ than 15 minutes.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span><span class="o">.</span><span class="n">date</span>
@@ -13424,20 +13220,24 @@ than 15 minutes.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[45]:</div>
+<div class="prompt output_prompt">Out[40]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0   2018-05-26 14:55:13.704518
-1   2018-05-26 14:55:16.617846
-2   2018-05-26 14:55:16.627014
-3   2018-05-26 14:55:16.634000
-4   2018-05-26 14:55:16.638400
-5   2017-01-01 12:59:03.000000
-6   2018-05-26 14:55:28.011853
-7   2018-05-26 14:55:28.021738
+<pre>0    2018-05-27 18:19:59.384559
+1    2018-05-27 18:19:59.414747
+2    2018-05-27 18:19:59.427118
+3    2018-05-27 18:19:59.433387
+4    2018-05-27 18:19:59.438893
+5    2017-01-01 12:59:03.000000
+6    2018-05-27 18:19:59.450219
+7    2018-05-27 18:19:59.459214
+8    2018-05-27 18:19:59.472929
+9    2017-01-01 12:59:03.000000
+10   2018-05-27 18:19:59.489029
+11   2018-05-27 18:19:59.493791
 Name: date, dtype: datetime64[ns]</pre>
 </div>
 
@@ -13449,7 +13249,7 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">lt_recent</span><span class="o">=</span> <span class="n">tr</span><span class="p">[(</span> <span class="n">time_now</span> <span class="o">-</span> <span class="n">tr</span><span class="o">.</span><span class="n">date</span> <span class="o">&lt;</span> <span class="n">time_delta</span> <span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">stock_index</span> <span class="o">==</span> <span class="s1">&#39;JOE&#39;</span><span class="p">)]</span>
@@ -13462,7 +13262,7 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">lt_recent</span>
@@ -13478,7 +13278,7 @@ Name: date, dtype: datetime64[ns]</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[47]:</div>
+<div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -13511,15 +13311,15 @@ Name: date, dtype: datetime64[ns]</pre>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2018-05-26 14:55:13.704518</td>
+      <td>2018-05-27 18:19:59.384559</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
-      <td>250.0</td>
+      <td>150.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2018-05-26 14:55:16.617846</td>
+      <td>2018-05-27 18:19:59.414747</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
@@ -13527,7 +13327,7 @@ Name: date, dtype: datetime64[ns]</pre>
     </tr>
     <tr>
       <th>2</th>
-      <td>2018-05-26 14:55:16.627014</td>
+      <td>2018-05-27 18:19:59.427118</td>
       <td>JOE</td>
       <td>100</td>
       <td>buy</td>
@@ -13548,30 +13348,39 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.a.iv.</strong> The function computing the Volume Weighted Stock Price. It takes as arguments the trading list tr_l (a Pandas Frame as defined above), the stock index, a parameter of the time delay for considering trades in the list, by default: 15 minutes.</p>
+<p><strong>1.a.iv.</strong> Computing the Volume Weighted Stock Price for a particular stock.<br>
+According to the given formula, I understand that <strong>the VWSP is the average trading price of a given stock within the last 15 minutes</strong><br></p>
+<p>The function below computes this.<br></p>
+<p>It takes as arguments:<br>
+the trading list: tr_l (a Pandas Frame as defined above)<br>
+the stock index: st_ind<br>
+min_delta: a parameter for the time delay for considering trades in the list, <strong>by default: 15 minutes</strong>. 
+It is a string that should denote a delay as requested by the constructor pd.Timedelta.<br></p>
+<p>It returns the average trading price of the stock within the last minutes as specified by min_delta.<br>
+If there were no trades for that stock a NAN value is returned.<br></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span>  <span class="nf">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr_l</span> <span class="p">,</span> <span class="n">stock</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;15 min&#39;</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span>  <span class="nf">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr_l</span> <span class="p">,</span> <span class="n">st_ind</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;15 min&#39;</span><span class="p">):</span>
     <span class="n">time_now</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
     <span class="c1"># print time_now</span>
     <span class="n">time_delta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">min_delta</span><span class="p">)</span>
     <span class="c1"># print time_delta</span>
-    <span class="n">t_rec</span> <span class="o">=</span> <span class="n">tr_l</span><span class="p">[(</span><span class="n">time_now</span> <span class="o">-</span> <span class="n">tr_l</span><span class="o">.</span><span class="n">date</span> <span class="o">&lt;</span> <span class="n">time_delta</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tr_l</span><span class="o">.</span><span class="n">stock_index</span> <span class="o">==</span> <span class="n">stock</span><span class="p">)]</span>
-    <span class="c1"># print t_rec</span>
+    <span class="n">t_rec</span> <span class="o">=</span> <span class="n">tr_l</span><span class="p">[(</span><span class="n">time_now</span> <span class="o">-</span> <span class="n">tr_l</span><span class="o">.</span><span class="n">date</span> <span class="o">&lt;</span> <span class="n">time_delta</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tr_l</span><span class="o">.</span><span class="n">stock_index</span> <span class="o">==</span> <span class="n">st_ind</span><span class="p">)]</span>
+    <span class="c1">#print t_rec</span>
     <span class="k">if</span> <span class="n">t_rec</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
         <span class="c1">#print &#39;zero&#39;</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
     <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_rec</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">t_rec</span><span class="p">[</span><span class="s1">&#39;qty&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="c1">#print num</span>
+    <span class="c1"># print num</span>
     <span class="n">den</span> <span class="o">=</span> <span class="n">t_rec</span><span class="p">[</span><span class="s1">&#39;qty&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="c1">#print den</span>
+    <span class="c1"># print den</span>
     <span class="k">if</span> <span class="n">den</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1">#print &#39;denominator null&#39;</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
@@ -13586,7 +13395,7 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr</span> <span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">)</span>
@@ -13602,31 +13411,13 @@ Name: date, dtype: datetime64[ns]</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2018-05-26 14:56:09.081625
-0 days 00:15:00
-                        date stock_index  qty buy/sell  price
-0 2018-05-26 14:55:13.704518         JOE  100     sell  250.0
-1 2018-05-26 14:55:16.617846         JOE  100     sell  250.0
-2 2018-05-26 14:55:16.627014         JOE  100      buy  250.0
-75000.0
-300
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[49]:</div>
+<div class="prompt output_prompt">Out[44]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>250.0</pre>
+<pre>216.66666666666666</pre>
 </div>
 
 </div>
@@ -13637,7 +13428,7 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr</span> <span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span>
@@ -13653,31 +13444,13 @@ Name: date, dtype: datetime64[ns]</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2018-05-26 14:56:12.699080
-0 days 06:00:00
-                        date stock_index  qty buy/sell  price
-0 2018-05-26 14:55:13.704518         JOE  100     sell  250.0
-1 2018-05-26 14:55:16.617846         JOE  100     sell  250.0
-2 2018-05-26 14:55:16.627014         JOE  100      buy  250.0
-75000.0
-300
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[45]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>250.0</pre>
+<pre>216.66666666666666</pre>
 </div>
 
 </div>
@@ -13688,7 +13461,7 @@ Name: date, dtype: datetime64[ns]</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr</span> <span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span>
@@ -13704,25 +13477,7 @@ Name: date, dtype: datetime64[ns]</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2018-05-26 14:56:15.588651
-0 days 06:00:00
-                        date stock_index  qty buy/sell  price
-4 2018-05-26 14:55:16.638400         ALE  200      buy  150.0
-6 2018-05-26 14:55:28.011853         ALE  150     sell   50.0
-7 2018-05-26 14:55:28.021738         ALE  300     sell  100.0
-67500.0
-650
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[51]:</div>
+<div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13760,7 +13515,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -13782,7 +13537,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
@@ -13798,7 +13553,7 @@ Values should be strictly positive.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[53]:</div>
+<div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13815,7 +13570,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">([])</span>
@@ -13831,7 +13586,7 @@ Values should be strictly positive.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[54]:</div>
+<div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -13848,7 +13603,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
@@ -13864,7 +13619,7 @@ Values should be strictly positive.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[55]:</div>
+<div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -13881,7 +13636,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13897,7 +13652,7 @@ Values should be strictly positive.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[227]:</div>
+<div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -13914,7 +13669,7 @@ Values should be strictly positive.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">([</span><span class="mf">34.</span><span class="p">,</span> <span class="mf">56.</span><span class="p">,</span> <span class="mf">76.</span><span class="p">,</span> <span class="mf">23.</span><span class="p">,</span> <span class="mf">45.</span><span class="p">,</span> <span class="mf">22.</span><span class="p">,</span><span class="mf">67.</span><span class="p">])</span>
@@ -13930,7 +13685,7 @@ Values should be strictly positive.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[56]:</div>
+<div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -13949,35 +13704,15 @@ Values should be strictly positive.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am not sure that I understand question b. and the definition of the GBCE All Share Index.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I can simply compute the geometric means of all stocks (their prices being
-given by a.iv.). But I admit that this figure does make much sense to me.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>I am not sure that I understand question b. and the definition of the GBCE All Share Index.</strong>
-I can simply compute the geometric means of all stocks (their prices being given by a.iv.). 
-But I admit that this figure does make much sense to me.</p>
+<p>It took me some time to understand that GBCE meant "Global Beverage Corporation Exchange"! What is the "BGCE All Share Index" then? Is that just the geometric mean price for all GBCE stocks? This is what is computed next: <strong>the geometric mean of stock prices given by the computation a.iv.</strong>.<br></p>
+<p>Note: I understand that log is the good measure of price variations but considering the average <strong>per stock</strong> looks a strange index to me. But I am not sure that I got it correctly.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock</span><span class="o">.</span><span class="n">index</span>
@@ -13993,7 +13728,7 @@ But I admit that this figure does make much sense to me.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[66]:</div>
+<div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -14010,7 +13745,7 @@ But I admit that this figure does make much sense to me.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock_indexes</span> <span class="o">=</span> <span class="n">stock</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
@@ -14023,7 +13758,7 @@ But I admit that this figure does make much sense to me.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">stock_indexes</span>
@@ -14039,7 +13774,7 @@ But I admit that this figure does make much sense to me.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[78]:</div>
+<div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -14056,68 +13791,7 @@ But I admit that this figure does make much sense to me.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr</span> <span class="p">,</span> <span class="n">stock_index</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">stock_index</span> <span class="ow">in</span> <span class="n">stock_indexes</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[77]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>nan</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">75.</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">125.</span><span class="p">)</span>
-<span class="n">tr</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;POP&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">300.</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr</span>
@@ -14133,7 +13807,7 @@ But I admit that this figure does make much sense to me.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[80]:</div>
+<div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -14166,15 +13840,15 @@ But I admit that this figure does make much sense to me.</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2018-05-26 14:55:13.704518</td>
+      <td>2018-05-27 18:19:59.384559</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
-      <td>250.0</td>
+      <td>150.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2018-05-26 14:55:16.617846</td>
+      <td>2018-05-27 18:19:59.414747</td>
       <td>JOE</td>
       <td>100</td>
       <td>sell</td>
@@ -14182,7 +13856,7 @@ But I admit that this figure does make much sense to me.</p>
     </tr>
     <tr>
       <th>2</th>
-      <td>2018-05-26 14:55:16.627014</td>
+      <td>2018-05-27 18:19:59.427118</td>
       <td>JOE</td>
       <td>100</td>
       <td>buy</td>
@@ -14190,7 +13864,7 @@ But I admit that this figure does make much sense to me.</p>
     </tr>
     <tr>
       <th>3</th>
-      <td>2018-05-26 14:55:16.634000</td>
+      <td>2018-05-27 18:19:59.433387</td>
       <td>GIN</td>
       <td>200</td>
       <td>buy</td>
@@ -14198,7 +13872,7 @@ But I admit that this figure does make much sense to me.</p>
     </tr>
     <tr>
       <th>4</th>
-      <td>2018-05-26 14:55:16.638400</td>
+      <td>2018-05-27 18:19:59.438893</td>
       <td>ALE</td>
       <td>200</td>
       <td>buy</td>
@@ -14207,50 +13881,58 @@ But I admit that this figure does make much sense to me.</p>
     <tr>
       <th>5</th>
       <td>2017-01-01 12:59:03.000000</td>
-      <td>ALE</td>
+      <td>TEA</td>
       <td>200</td>
-      <td>sell</td>
-      <td>150.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2018-05-26 14:55:28.011853</td>
-      <td>ALE</td>
-      <td>150</td>
-      <td>sell</td>
-      <td>50.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2018-05-26 14:55:28.021738</td>
-      <td>ALE</td>
-      <td>300</td>
-      <td>sell</td>
+      <td>buy</td>
       <td>100.0</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>2018-05-26 16:05:10.465405</td>
+      <th>6</th>
+      <td>2018-05-27 18:19:59.450219</td>
       <td>GIN</td>
       <td>200</td>
       <td>sell</td>
       <td>75.0</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>2018-05-26 16:05:10.474386</td>
+      <th>7</th>
+      <td>2018-05-27 18:19:59.459214</td>
       <td>TEA</td>
       <td>300</td>
       <td>sell</td>
       <td>125.0</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>2018-05-26 16:05:10.482794</td>
+      <th>8</th>
+      <td>2018-05-27 18:19:59.472929</td>
       <td>POP</td>
       <td>300</td>
       <td>sell</td>
       <td>300.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2017-01-01 12:59:03.000000</td>
+      <td>ALE</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2018-05-27 18:19:59.489029</td>
+      <td>ALE</td>
+      <td>150</td>
+      <td>sell</td>
+      <td>50.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2018-05-27 18:19:59.493791</td>
+      <td>ALE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>100.0</td>
     </tr>
   </tbody>
 </table>
@@ -14263,24 +13945,12 @@ But I admit that this figure does make much sense to me.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A function computing the geometric mean of all stock prices...</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">GBCE</span><span class="p">(</span><span class="n">stock_list</span><span class="p">,</span><span class="n">trade_list</span><span class="p">):</span>
-    <span class="n">stock_indexes</span> <span class="o">=</span> <span class="n">stock_list</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
-    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">trade_list</span> <span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">stock_indexes</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">geometric_mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr</span> <span class="p">,</span> <span class="n">stock_index</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">stock_index</span> <span class="ow">in</span> <span class="n">stock_indexes</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -14290,10 +13960,10 @@ But I admit that this figure does make much sense to me.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">GBCE</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="n">tr</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arr2</span>
 </pre></div>
 
 </div>
@@ -14306,13 +13976,580 @@ But I admit that this figure does make much sense to me.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[85]:</div>
+<div class="prompt output_prompt">Out[58]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>143.4988240089921</pre>
+<pre>[125.0, 103.84615384615384, 216.66666666666666, 300.0, 62.5]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">geometric_mean</span><span class="p">(</span><span class="n">arr2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[59]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>139.45007771622844</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The function GBCE_stock_index below computes the geometric mean of all stock prices.
+Prices considered are the average trading prices computed by the function volume_weighted_stock_price -- see <strong>1.a.iv.</strong><br></p>
+<p>Its inputs:<br>
+stock_list: the stock list that is a Pandas Frame as specified before<br>
+trade_list: the trade list that is a Pandas Frame as specified before<br>
+min_delta: a string denoting a time delay for considering recent trades. By default its value
+corresponds to a <strong>15 minute delay</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note: The implementation is such that if a stock has not been traded recently
+the value returned is NAN.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">GBCE_stock_index</span><span class="p">(</span><span class="n">stock_list</span><span class="p">,</span><span class="n">trade_list</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;15 min&#39;</span><span class="p">):</span>
+    <span class="n">stock_indexes</span> <span class="o">=</span> <span class="n">stock_list</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">trade_list</span> <span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">min_delta</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">stock_indexes</span><span class="p">]</span>
+    <span class="c1"># print arr</span>
+    <span class="k">return</span> <span class="n">geometric_mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>MORE testing data and commands...</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">GBCE_stock_index</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span> <span class="s1">&#39;360 min&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[61]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>139.45007771622844</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trades</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[62]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>stock_index</th>
+      <th>qty</th>
+      <th>buy/sell</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr2</span> <span class="o">=</span> <span class="n">trades</span>
+<span class="n">tr2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[63]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>stock_index</th>
+      <th>qty</th>
+      <th>buy/sell</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr2</span> <span class="p">,</span> <span class="n">stock_index</span><span class="p">,</span> <span class="n">min_delta</span><span class="o">=</span><span class="s1">&#39;360 min&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">stock_index</span> <span class="ow">in</span> <span class="n">stock_indexes</span><span class="p">]</span>
+<span class="n">arr3</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[64]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[nan, nan, nan, nan, nan]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">GBCE_stock_index</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="n">tr2</span><span class="p">,</span> <span class="s1">&#39;360 min&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>nan</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">tr3</span> <span class="o">=</span> <span class="n">trades</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">8.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">10.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;JOE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">12.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">10.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">20.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;GIN&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">30.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">20.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">40.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;ALE&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">60.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">70.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">80.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;TEA&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">90.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;POP&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">159.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;POP&#39;</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">160.</span><span class="p">)</span>
+<span class="n">tr3</span> <span class="o">=</span> <span class="n">add_trade</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;POP&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;sell&#39;</span><span class="p">,</span> <span class="mf">161.</span><span class="p">)</span>
+<span class="n">tr3</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[66]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>stock_index</th>
+      <th>qty</th>
+      <th>buy/sell</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018-05-27 18:20:00.675418</td>
+      <td>JOE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2018-05-27 18:20:00.694628</td>
+      <td>JOE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2018-05-27 18:20:00.703454</td>
+      <td>JOE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2018-05-27 18:20:00.710231</td>
+      <td>GIN</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2018-05-27 18:20:00.717030</td>
+      <td>GIN</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2018-05-27 18:20:00.721522</td>
+      <td>GIN</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2018-05-27 18:20:00.725651</td>
+      <td>ALE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>20.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2018-05-27 18:20:00.739490</td>
+      <td>ALE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2018-05-27 18:20:00.747509</td>
+      <td>ALE</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>60.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2018-05-27 18:20:00.751939</td>
+      <td>TEA</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>70.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2018-05-27 18:20:00.756115</td>
+      <td>TEA</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2018-05-27 18:20:00.760361</td>
+      <td>TEA</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>90.0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2018-05-27 18:20:00.765320</td>
+      <td>POP</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>159.0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2018-05-27 18:20:00.769466</td>
+      <td>POP</td>
+      <td>300</td>
+      <td>sell</td>
+      <td>160.0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2018-05-27 18:20:00.773544</td>
+      <td>POP</td>
+      <td>200</td>
+      <td>sell</td>
+      <td>161.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">volume_weighted_stock_price</span><span class="p">(</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;XXX&#39;</span><span class="p">,</span> <span class="s1">&#39;10 min&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>nan</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">GBCE_stock_index</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span><span class="n">tr3</span><span class="p">,</span> <span class="s1">&#39;360 min&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[68]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>40.0</pre>
 </div>
 
 </div>
